@@ -33,9 +33,6 @@ html {
 }
 
 .container .header {
-  -webkit-box-flex: 0.2;
-      -ms-flex: 0.2;
-          flex: 0.2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,10 +45,13 @@ html {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
 }
 
 .container .header h3 {
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 
 .container .player {
@@ -67,6 +67,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container .player .wrapper {
+  background: #3f3a31;
+  border-radius: 1rem;
+  padding: 3rem;
 }
 
 .container .player .wrapper .details {
@@ -87,7 +93,7 @@ html {
 }
 
 .container .player .wrapper .details .title {
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 600;
   margin-bottom: 4rem;
 }
@@ -98,24 +104,48 @@ html {
 }
 
 .container .player .wrapper .details .image-box img {
-  width: 100%;
+  border-radius: 50%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 50%;
+  width: 100%;
+}
+
+.container .player .wrapper .playback {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container .player .wrapper .playback .progress {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 2.5rem;
-  width: 25rem;
-  background: #3f3a31;
+  width: 20rem;
+}
+
+.container .player .wrapper .playback .progress .progress-wrapper {
+  background-color: white;
+  border-radius: 0.5rem;
+  height: 0.4rem;
 }
 
 .container .player .wrapper .playback .controller {
   margin-top: 3rem;
-  height: 5rem;
   width: 25rem;
   background: #3f3a31;
+  border-radius: 1 rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,12 +157,46 @@ html {
           align-items: center;
 }
 
-.container .player .wrapper .playback .controller .fas {
-  font-size: 2rem;
+.container .player .wrapper .playback .controller button {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgba(226, 235, 206, 0.959);
 }
 
-.container .player .wrapper .playback .controller .fa-play-circle {
+.container .player .wrapper .playback .controller button.play {
   margin: 0 3rem;
-  font-size: 3rem;
+}
+
+.container .player .wrapper .playback .controller button.play .play-icon {
+  font-size: 5rem;
+}
+
+.container .player .wrapper .playback .controller .fas {
+  font-size: 1.6rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
