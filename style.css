@@ -17,15 +17,15 @@ html {
   height: 100vh;
   background: -webkit-gradient(linear, left bottom, left top, from(#352e27), color-stop(81%, #2c2b2b));
   background: linear-gradient(360deg, #352e27 0%, #2c2b2b 81%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -33,15 +33,15 @@ html {
 }
 
 .container .header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -58,15 +58,15 @@ html {
   -webkit-box-flex: 0.8;
       -ms-flex: 0.8;
           flex: 0.8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .container .player .wrapper {
@@ -76,15 +76,15 @@ html {
 }
 
 .container .player .wrapper .details {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -131,8 +131,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.048);
   width: 20rem;
+  cursor: pointer;
 }
 
 .container .player .wrapper .playback .progress .progress-wrapper {
@@ -142,26 +143,26 @@ html {
 }
 
 .container .player .wrapper .playback .controller {
-  margin-top: 3rem;
-  width: 25rem;
-  background: #3f3a31;
-  border-radius: 1 rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: #3f3a31;
+  border-radius: 1 rem;
+  margin-top: 3rem;
+  width: 25rem;
 }
 
 .container .player .wrapper .playback .controller button {
   background: none;
   border: none;
-  outline: none;
   color: rgba(226, 235, 206, 0.959);
+  outline: none;
 }
 
 .container .player .wrapper .playback .controller button.play {

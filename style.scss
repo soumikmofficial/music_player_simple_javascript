@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
 @mixin flex-center {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 * {
@@ -83,8 +83,10 @@ html {
         & .progress {
           align-items: center;
           display: flex;
-          height: 2.5rem;
+          // height: 2.5rem;
+          background-color: rgba(255, 255, 255, 0.048);
           width: 20rem;
+          cursor: pointer;
           & .progress-wrapper {
             background-color: white;
             border-radius: 0.5rem;
@@ -93,17 +95,17 @@ html {
         }
 
         & .controller {
-          margin-top: 3rem;
-          width: 25rem;
+          @include flex-center;
           background: rgb(63, 58, 49);
           border-radius: 1 rem;
-          @include flex-center;
+          margin-top: 3rem;
+          width: 25rem;
 
           & button {
             background: none;
             border: none;
-            outline: none;
             color: rgba(226, 235, 206, 0.959);
+            outline: none;
             &.play {
               margin: 0 3rem;
               & .play-icon {

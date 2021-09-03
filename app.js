@@ -6,6 +6,7 @@ const play = document.querySelector(".play-icon");
 const next = document.querySelector(".next");
 const mainContainer = document.querySelector(".container");
 const progress = document.querySelector(".progress-wrapper");
+const progress_container = document.querySelector(".progress");
 
 let songs = ["Exist For Love", "Dark Matter", "It Happened Quiet"];
 
@@ -58,6 +59,13 @@ let updateProgress = (e) => {
   progress.style.width = `${progressPercent}%`;
 };
 
+let selectProgress = (e) => {
+  const width = progress_container.clientWidth;
+  const clickX = e.offsetX;
+  audio.currentTime = (clickX / width) * audio.duration;
+  console.log(currentTime);
+};
+
 loadSong(songIndex);
 
 play.addEventListener("click", () => {
@@ -75,3 +83,7 @@ prev.addEventListener("click", prevSong);
 next.addEventListener("click", nextSong);
 
 audio.addEventListener("timeupdate", updateProgress);
+
+progress_container.addEventListener("click", selectProgress);
+
+audio.addEventListener("ended", nextSong);
